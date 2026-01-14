@@ -27,9 +27,9 @@ module "db" {
   username = var.db_user
   password = var.db_password
 
-  vpc_security_group_ids = [module.eks.node_security_group_id]
+  db_subnet_group_name = aws_db_subnet_group.this.name
 
-  subnet_ids             = module.vpc.private_subnets
+  vpc_security_group_ids = [module.eks.node_security_group_id]
 
   publicly_accessible = false
   skip_final_snapshot = true

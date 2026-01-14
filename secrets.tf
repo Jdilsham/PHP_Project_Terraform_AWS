@@ -2,7 +2,7 @@ module "php_app_secrets" {
   source  = "terraform-aws-modules/secrets-manager/aws"
   version = "1.1.1"
 
-  name = "${var.project_name}-${var.environment}-php-secrets"
+  name = "${var.project_name}-${var.environment}-php-secrets-v2"
 
   secret_string = jsonencode({
     DB_HOST     = var.db_host
