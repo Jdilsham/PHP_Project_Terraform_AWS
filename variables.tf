@@ -15,3 +15,24 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
+
+variable "db_host" {
+  type        = string
+  description = "Database host"
+}
+
+variable "db_name" {
+  type        = string
+  description = "Database name"
+}
+
+variable "db_user" {
+  type        = string
+  description = "Database username"
+}
+
+variable "db_password" {
+  type        = string
+  description = "Database password"
+  sensitive   = true
+}

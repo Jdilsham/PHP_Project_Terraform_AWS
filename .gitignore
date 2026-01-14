@@ -2,3 +2,4 @@
 *.tfstate
 *.tfstate.backup
 .terraform.lock.hcl
+#need to add terraform.tfvars file to gitignore
