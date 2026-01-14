@@ -1,3 +1,14 @@
+resource "aws_db_subnet_group" "this" {
+  name       = "${var.project_name}-${var.environment}-db-subnet-group"
+  subnet_ids = module.vpc.private_subnets
+
+  tags = {
+    Project     = var.project_name
+    Environment = var.environment
+  }
+}
+
+
 module "db" {
   source  = "terraform-aws-modules/rds/aws"
   version = "6.6.0"

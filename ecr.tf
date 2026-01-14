@@ -5,7 +5,7 @@ module "ecr_php_app" {
   repository_name = "${var.project_name}-${var.environment}-php-app"
   repository_type = "private"
 
-  create_lifecycle_policy = true
+  create_lifecycle_policy = false
 
   tags = {
     Project     = var.project_name
